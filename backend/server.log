@@ -1,0 +1,706 @@
+INFO:     Started server process [12504]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60111 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52401 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:52404 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:52405 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:414: RuntimeWarning: coroutine 'handle_assignment_timeout' was never awaited
+  def _iterencode(o, _current_indent_level):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     127.0.0.1:52406 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:52407 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:52447 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:50661 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50672 - "POST /request HTTP/1.1" 200 OK
+f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py:734: RuntimeWarning: coroutine 'handle_assignment_timeout' was never awaited
+  def __init__(self, parent_id: int | None, cancel_scope: CancelScope | None):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     127.0.0.1:50684 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50697 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50712 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50712 - "GET /requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50712 - "GET /request/REQ-0081 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50732 - "GET /volunteers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "GET /volunteers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50769 - "GET /volunteers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61479 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61493 - "GET /requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61499 - "GET /request/REQ-0001 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61499 - "GET /request/REQ-9999 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61513 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /volunteers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "POST /volunteer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "POST /volunteer/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "POST /volunteer/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "POST /request HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:56128 - "POST /assign HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56140 - "POST /volunteer/accept HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56140 - "POST /mission/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56140 - "GET /volunteer/VOL-035/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56158 - "POST /complete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56158 - "GET /volunteer/VOL-035/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56182 - "POST /request HTTP/1.1" 200 OK
+C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\traceback.py:369: RuntimeWarning: coroutine 'handle_assignment_timeout' was never awaited
+  return next(itertools.islice(positions_gen, instruction_index // 2, None))
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\applications.py", line 1215, in __call__
+    await super().__call__(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\cors.py", line 149, in simple_response
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 78, in __call__
+    await responder(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 103, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 676, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 2786, in app
+    await route.handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 1310, in handle
+    await super().handle(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\routing.py", line 282, in handle
+    await self.app(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 165, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\routing.py", line 152, in app
+    await response(scope, receive, send)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\responses.py", line 172, in __call__
+    await self.background()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\fastapi\background.py", line 67, in __call__
+    await task()
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\background.py", line 23, in __call__
+    await run_in_threadpool(self.func, *self.args, **self.kwargs)
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\SahayakNet-AI_Disaster_Coordination_System-main\backend\main.py", line 1599, in auto_assign_volunteer
+    assignment_timeouts[request["id"]] = asyncio.create_task(
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 417, in create_task
+    loop = events.get_running_loop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+INFO:     127.0.0.1:56183 - "POST /assign HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56183 - "POST /volunteer/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56188 - "POST /request HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56188 - "POST /volunteer/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56188 - "POST /auto-assign?request_id=REQ-0091 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "POST /priority HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "GET /dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "GET /dashboard?compact=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "GET /requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50212 - "GET /weather?zone=Raipur HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50212 - "GET /risk-analysis?zone=Patna HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50221 - "GET /weather?zone=Raipur HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50221 - "GET /risk-analysis?zone=Patna HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50225 - "POST /alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50225 - "GET /alerts/history?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50225 - "POST /broadcast HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50225 - "POST /broadcast HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:50236 - "GET /alerts/history?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "POST /broadcast HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "POST /broadcast HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "POST /broadcast HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "POST /broadcast HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "POST /broadcast HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "POST /broadcast HTTP/1.1" 429 Too Many Requests
+[IVR] Incoming request - Content-Type: application/json
+[IVR] Remote: Address(host='127.0.0.1', port=50242)
+[IVR] Processing as JSON (frontend simulator)
+[IVR] JSON Payload: {'phone': '+14156811342', 'digit': '1', 'zone': 'Ranchi'}
+[IVR] JSON Mode - Phone: +14156811342, Digit: 1, Zone: Ranchi
+[IVR] Creating request - Category: medical, Zone: Ranchi
+[IVR] Request created: REQ-0092
+[IVR] JSON response ready - ID: REQ-0092
+INFO:     127.0.0.1:50242 - "POST /ivr HTTP/1.1" 200 OK
+[IVR] Incoming request - Content-Type: application/json
+[IVR] Remote: Address(host='127.0.0.1', port=50242)
+[IVR] Processing as JSON (frontend simulator)
+[IVR] JSON Payload: {'phone': '+14156811343', 'digit': '9', 'zone': 'Ranchi'}
+[IVR] JSON Mode - Phone: +14156811343, Digit: 9, Zone: Ranchi
+[IVR] Invalid digit: 9, defaulting to food
+[IVR] Creating request - Category: food, Zone: Ranchi
+[IVR] Request created: REQ-0093
+[IVR] JSON response ready - ID: REQ-0093
+INFO:     127.0.0.1:50242 - "POST /ivr HTTP/1.1" 200 OK
+[TWILIO/VOICE] Incoming call - Remote: Address(host='127.0.0.1', port=50242)
+[TWILIO/VOICE] Gather action URL: http://localhost:8000/ivr
+[TWILIO/VOICE] TwiML menu generated successfully
+INFO:     127.0.0.1:50242 - "GET /twilio/voice HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62684 - "POST /sms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62684 - "POST /sms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62684 - "POST /sms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62684 - "POST /sms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63401 - "POST /whatsapp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63401 - "POST /whatsapp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63401 - "POST /whatsapp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59742 - "POST /whatsapp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59742 - "POST /whatsapp HTTP/1.1" 200 OK

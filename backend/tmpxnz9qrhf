@@ -1,0 +1,207 @@
+{
+  "requests": [
+    {
+      "id": "REQ-0102",
+      "name": "IVR User",
+      "phone": "+916207114453",
+      "category": "food",
+      "family_size": 6,
+      "people": 6,
+      "location": "IVR Request - Zone: Ranchi",
+      "zone": "Ranchi",
+      "state": "",
+      "city": "IVR Request - Zone: Ranchi",
+      "lat": 23.365291,
+      "lng": 85.327904,
+      "priority": 47,
+      "createdAt": "2026-10-09T19:48:48.938844+00:00",
+      "status": "assigned",
+      "executionStatus": "assigned",
+      "source": "ivr",
+      "sourceLabel": "IVR",
+      "assignedAt": "2026-10-09T19:56:49.656737+00:00",
+      "acceptedAt": null,
+      "completedAt": null,
+      "resourcesNeeded": {
+        "food_packets": 18,
+        "water_liters": 30,
+        "water_supply": 30,
+        "medicine_kits": 0,
+        "shelter_units": 0,
+        "baby_care_kits": 0,
+        "women_care_kits": 0,
+        "rescue_boats": 0,
+        "emergency_essentials": 0
+      },
+      "resourceSummary": "Food needed: 12 units",
+      "priorityReason": "High priority due to food shortage + 6 members.",
+      "mergedCount": 1,
+      "assignedVolunteerId": "ranchi-local",
+      "assignedVolunteerName": "Ranchi Local",
+      "eta": "~4 min",
+      "distanceKm": 2.28,
+      "etaUpdatedAt": "2026-10-09T19:56:49.656737+00:00"
+    },
+    {
+      "id": "REQ-0101",
+      "name": "Citizen User",
+      "phone": "9000000000",
+      "category": "rescue",
+      "family_size": 3,
+      "people": 3,
+      "location": "Charoda",
+      "zone": "Durg",
+      "state": "",
+      "city": "Charoda",
+      "lat": 21.21705723900415,
+      "lng": 81.30773530960741,
+      "priority": 61,
+      "createdAt": "2026-10-09T18:39:22.177633+00:00",
+      "status": "assigned",
+      "executionStatus": "assigned",
+      "source": "web",
+      "sourceLabel": "WEB",
+      "assignedAt": "2026-10-09T19:56:42.623910+00:00",
+      "acceptedAt": null,
+      "completedAt": null,
+      "resourcesNeeded": {
+        "food_packets": 0,
+        "water_liters": 0,
+        "water_supply": 0,
+        "medicine_kits": 0,
+        "shelter_units": 0,
+        "baby_care_kits": 0,
+        "women_care_kits": 0,
+        "rescue_boats": 1,
+        "emergency_essentials": 2
+      },
+      "resourceSummary": "Rescue support needed for 3 people",
+      "priorityReason": "High priority due to rescue need + 3 members.",
+      "mergedCount": 1,
+      "assignedVolunteerId": "bhilai-local",
+      "assignedVolunteerName": "Bhilai Local",
+      "eta": "~1 min",
+      "distanceKm": 0.0,
+      "etaUpdatedAt": "2026-10-09T19:56:42.623910+00:00"
+    }
+  ],
+  "volunteers": [
+    {
+      "id": "bhilai-local",
+      "name": "Bhilai Local",
+      "city": "Bhilai Nagar",
+      "zone": "Bhilai Nagar",
+      "state": "Chhattisgarh",
+      "availability": "busy",
+      "assignedRequest": "REQ-0101",
+      "lat": 21.217057,
+      "lng": 81.307735,
+      "skills": [
+        "Search & Rescue"
+      ],
+      "heading": 50.37,
+      "lastSeenAt": "2026-10-09T19:56:47.291130+00:00"
+    },
+    {
+      "id": "raipur-local",
+      "name": "Raipur Local",
+      "city": "Raipur",
+      "zone": "Raipur",
+      "state": "Chhattisgarh",
+      "availability": "available",
+      "assignedRequest": null,
+      "lat": 21.241904,
+      "lng": 81.551616,
+      "skills": [
+        "Search & Rescue"
+      ],
+      "heading": 263.81,
+      "lastSeenAt": "2026-10-09T19:56:42.300730+00:00"
+    },
+    {
+      "id": "ranchi-local",
+      "name": "Ranchi Local",
+      "city": "Ranchi",
+      "zone": "Ranchi",
+      "state": "Jharkhand",
+      "availability": "busy",
+      "assignedRequest": "REQ-0102",
+      "lat": 23.348064,
+      "lng": 85.315712,
+      "skills": [
+        "Search & Rescue"
+      ],
+      "heading": 33.01,
+      "lastSeenAt": "2026-10-09T19:56:17.283294+00:00"
+    },
+    {
+      "id": "far",
+      "name": "Far Volunteer",
+      "city": "Ranchi",
+      "zone": "Ranchi",
+      "state": "Jharkhand",
+      "availability": "available",
+      "assignedRequest": null,
+      "lat": 23.348064,
+      "lng": 85.315712,
+      "skills": [
+        "Search & Rescue"
+      ],
+      "heading": 33.01,
+      "lastSeenAt": "2026-10-09T19:56:47.291130+00:00"
+    }
+  ],
+  "missions": [
+    {
+      "id": "MIS-0001",
+      "requestId": "REQ-0089",
+      "volunteerId": "VOL-035",
+      "status": "completed",
+      "createdAt": "2026-10-08T15:08:00.228543+00:00",
+      "completedAt": "2026-10-08T15:08:39.101890+00:00"
+    },
+    {
+      "id": "MIS-0002",
+      "requestId": "REQ-0090",
+      "volunteerId": "VOL-035",
+      "status": "assigned",
+      "createdAt": "2026-10-08T15:09:04.561485+00:00",
+      "completedAt": null
+    },
+    {
+      "id": "MIS-0003",
+      "requestId": "REQ-0055",
+      "volunteerId": "VOL-003",
+      "status": "completed",
+      "createdAt": "2026-10-08T15:47:01.895729+00:00",
+      "completedAt": "2026-10-08T15:47:19.990888+00:00"
+    },
+    {
+      "id": "MIS-0004",
+      "requestId": "REQ-0023",
+      "volunteerId": "VOL-003",
+      "status": "completed",
+      "createdAt": "2026-10-08T15:47:02.972036+00:00",
+      "completedAt": "2026-10-08T15:47:24.303173+00:00"
+    },
+    {
+      "id": "MIS-0005",
+      "requestId": "REQ-0095",
+      "volunteerId": "VOL-004",
+      "status": "assigned",
+      "createdAt": "2026-10-08T16:09:40.961210+00:00",
+      "completedAt": null
+    },
+    {
+      "id": "MIS-0006",
+      "requestId": "REQ-0100",
+      "volunteerId": "VOL-036",
+      "status": "completed",
+      "createdAt": "2026-10-08T16:24:23.617027+00:00",
+      "completedAt": "2026-10-08T16:24:54.524835+00:00"
+    }
+  ],
+  "request_counter": 103,
+  "volunteer_counter": 37,
+  "mission_counter": 7
+}
