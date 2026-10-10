@@ -260,12 +260,8 @@ Each district has 5 cities — **125 mapped locations** total with precise lat/l
 
 ---
 
-## Team — HackBios 2026 Finals
+## Team Hanuman Ansh — HackBios 2026 Finals
 
 Built for the HackBios 2026 national hackathon finals.
 
 ---
-
-## License
-
-[MIT](LICENSE)
